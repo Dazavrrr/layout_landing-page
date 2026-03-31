@@ -1,8 +1,10 @@
+@use '../utils/variables' as vars;
+
 .card {
   &__image {
     width: 100%;
     margin-bottom: 24px;
-    transition: transform 0.3s;
+    transition: transform vars.$transition-duration;
 
     &:hover {
       transform: scale(1.05);
@@ -10,22 +12,21 @@
   }
 
   &__title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 140%;
+    font-size: vars.$font-size-l;
+    font-weight: vars.$font-bold;
+    line-height: vars.$line-height-md;
     margin-bottom: 8px;
   }
 
   &__description {
-    font-size: 16px;
-    line-height: 140%;
-    font-weight: 400;
+    font-size: vars.$font-size-m;
+    line-height: vars.$line-height-md;
     margin-bottom: 12px;
   }
 
   &__price {
-    font-size: 16px;
-    line-height: 140%;
-    font-weight: 700;
+    font-size: vars.$font-size-m;
+    line-height: vars.$line-height-md;
+    font-weight: vars.$font-bold;
   }
 }

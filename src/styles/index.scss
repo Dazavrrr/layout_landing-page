@@ -1,23 +1,24 @@
-@import './utils/variables';
-@import './utils/mixins';
-@import './blocks/page';
-@import './blocks/header';
-@import './blocks/top-bar';
-@import './blocks/icon';
-@import './blocks/menu';
-@import './blocks/nav';
-@import './blocks/main';
-@import './blocks/section-title';
-@import './blocks/recommended';
-@import './blocks/card';
-@import './blocks/categories';
-@import './blocks/about-us';
-@import './blocks/contacts';
-@import './blocks/footer';
+@use './utils/variables' as vars;
+@use './utils/mixins' as mix;
+@use './blocks/page';
+@use './blocks/header';
+@use './blocks/top-bar';
+@use './blocks/icon';
+@use './blocks/menu';
+@use './blocks/nav';
+@use './blocks/main';
+@use './blocks/section-title';
+@use './blocks/recommended';
+@use './blocks/card';
+@use './blocks/categories';
+@use './blocks/about-us';
+@use './blocks/contacts';
 
 body,
 p,
+h1,
 h2,
 h3 {
   margin: 0;
+  font-family: vars.$font-family;
 }

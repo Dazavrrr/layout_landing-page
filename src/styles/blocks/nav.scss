@@ -1,3 +1,5 @@
+@use '../utils/variables' as vars;
+
 .nav {
   &__list {
     margin: 0;
@@ -13,9 +15,9 @@
     position: relative;
     color: inherit;
     text-decoration: none;
-    font-size: 22px;
-    line-height: 22px;
-    letter-spacing: 2px;
+    font-size: vars.$font-size-xl;
+    line-height: vars.$line-height-md;
+    letter-spacing: vars.$letter-spacing;
 
     &::after {
       content: '';
@@ -24,9 +26,9 @@
       display: block;
       width: 100%;
       height: 1px;
-      background-color: #292929;
+      background-color: vars.$main-dark-color;
 
-      transition: transform $transition-duration;
+      transition: transform vars.$transition-duration;
       transform: scale(0);
       transform-origin: left;
     }

@@ -1,13 +1,16 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+
 .contacts {
   padding-bottom: 64px;
 
-  @include on-tablet {
+  @include mix.on-tablet {
     padding-bottom: 120px;
   }
 
   &__wrapper {
-    @include on-desktop {
-      @include page-grid;
+    @include mix.on-desktop {
+      @include mix.page-grid;
     }
   }
 
@@ -18,11 +21,11 @@
     margin-bottom: 48px;
     grid-column: span 5;
 
-    @include on-tablet {
+    @include mix.on-tablet {
       margin-bottom: 80px;
     }
 
-    @include on-desktop {
+    @include mix.on-desktop {
       margin-bottom: 0;
     }
   }
@@ -37,64 +40,66 @@
     box-sizing: border-box;
     height: 48px;
     padding: 0 16px;
-    border-radius: 8px;
+    border-radius: vars.$border-radius-m;
     border: none;
-    background-color: #f8f8fa;
+    background-color: vars.$field-bg-color;
+    font-family: vars.$font-family;
 
     &::placeholder {
-      color: #7e7e83;
-      font-size: 14px;
+      color: vars.$secondary-text-color;
+      font-size: vars.$font-size-s;
     }
 
     &:hover {
-      border: 1px solid #d5d7de;
+      border: 1px solid vars.$field-border-color;
     }
 
     &:active {
       outline: none;
-      border: 1px solid #292929;
+      border: 1px solid vars.$main-dark-color;
     }
   }
 
   &__message {
     height: 148px;
     padding: 14px 16px 0;
-    border-radius: 8px;
+    border-radius: vars.$border-radius-m;
     border: none;
-    background-color: #f8f8fa;
+    background-color: vars.$field-bg-color;
+    font-family: vars.$font-family;
 
     &::placeholder {
-      color: #7e7e83;
-      font-size: 14px;
+      color: vars.$secondary-text-color;
+      font-size: vars.$font-size-s;
     }
   }
 
   &__button {
     box-sizing: border-box;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 27px;
-    color: #fff;
-    background-color: #292929;
-    border-radius: 8px;
+    font-size: vars.$font-size-m;
+    font-weight: vars.$font-bold;
+    line-height: vars.$line-height-lg;
+    color: vars.$main-white-color;
+    background-color: vars.$main-dark-color;
+    border-radius: vars.$border-radius-m;
     height: 56px;
     transition:
-      background-color 0.3s,
-      color 0.3s;
+      background-color vars.$transition-duration,
+      color vars.$transition-duration;
 
     &:hover {
-      color: #292929;
-      background-color: #f8f8fa;
-      border: 2px solid #f0f1f4;
+      color: vars.$main-dark-color;
+      background-color: vars.$field-bg-color;
+      border: 2px solid vars.$button-border-hover;
     }
 
     &:active {
-      background-color: #111;
-      border: 2px solid #111;
-      color: #fff;
+      background-color: vars.$button-border-active;
+      border: 2px solid vars.$button-border-active;
+      color: vars.$main-white-color;
     }
 
-    @include on-desktop {
+    @include mix.on-desktop {
       width: 135px;
     }
   }
@@ -114,15 +119,15 @@
   }
 
   &__description {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 140%;
-    color: #9393a3;
+    font-size: vars.$font-size-s;
+    font-weight: vars.$font-bold;
+    line-height: vars.$line-height-md;
+    color: vars.$desc-text-color;
   }
 
   &__info {
-    color: #191919;
-    font-size: 16px;
+    color: vars.$third-text-color;
+    font-size: vars.$font-size-m;
     text-decoration: none;
   }
 }

@@ -1,8 +1,9 @@
+@use '../utils/variables' as vars;
+
 .page {
-  font-family: 'Space Grotesk', sans-serif;
-  color: #292929;
-  font-size: 16px;
-  line-height: 140%;
+  color: vars.$main-dark-color;
+  font-size: vars.$font-size-m;
+  line-height: vars.$line-height-md;
   scroll-behavior: smooth;
 
   &__body {
@@ -17,7 +18,7 @@
     left: 0;
 
     opacity: 0;
-    transition: all $transition-duration;
+    transition: all vars.$transition-duration;
     transform: translateX(-100%);
     pointer-events: none;
 

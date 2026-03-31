@@ -1,39 +1,40 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+
 .header {
-  background-image: url(../images/header-bg-mobile.png);
+  background-image: url(../images/header-bg.png);
   background-size: cover;
   background-position: center;
 
   &__content {
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   &__title {
-    margin: 0;
-    font-size: 36px;
-    line-height: 100%;
-    font-weight: 700;
+    font-size: vars.$header-title-size;
+    line-height: vars.$line-height-sm;
+    font-weight: vars.$font-bold;
 
-    @include on-tablet {
-      font-size: 48px;
+    @include mix.on-tablet {
+      font-size: vars.$header-title-tablet;
     }
 
-    @include on-desktop {
-      font-size: 56px;
+    @include mix.on-desktop {
+      font-size: vars.$header-title-desktop;
     }
   }
 
   &__bottom {
     padding-bottom: 40px;
 
-    @include on-tablet {
+    @include mix.on-tablet {
       padding-bottom: 65px;
     }
 
-    @include on-desktop {
+    @include mix.on-desktop {
       padding-bottom: 92px;
     }
   }

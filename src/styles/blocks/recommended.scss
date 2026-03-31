@@ -1,6 +1,9 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+
 .recommended {
   &__cards {
-    @include page-grid;
+    @include mix.page-grid;
 
     gap: 40px;
   }
@@ -8,11 +11,11 @@
   &__product {
     grid-column: 1 / -1;
 
-    @include on-tablet {
+    @include mix.on-tablet {
       grid-column: 2 / -2;
     }
 
-    @include on-desktop {
+    @include mix.on-desktop {
       grid-column: span 4;
     }
   }

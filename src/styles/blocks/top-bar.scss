@@ -1,3 +1,6 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+
 .top-bar {
   padding-block: 28px;
 
@@ -5,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include on-tablet {
+  @include mix.on-tablet {
     padding-block: 36px;
   }
 
@@ -15,12 +18,12 @@
 
   &__logo {
     display: flex;
-    height: 16px;
+    height: vars.$logo-height;
 
-    @include hover(transform, scale(1.2));
+    @include mix.hover(transform, scale(1.2));
 
-    @include on-tablet {
-      height: 24px;
+    @include mix.on-tablet {
+      height: vars.$logo-height-tablet;
     }
   }
 
