@@ -3,15 +3,13 @@
 .full-width-image {
   width: 100%;
   height: 200px;
-  background-image: url(/src/images/about-us-image.png);
+  background-image: url('/src/images/about-us-image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 48px;
 
   @include mix.on-tablet {
     height: 400px;
-    margin-bottom: 56px;
   }
 
   @include mix.on-desktop {
