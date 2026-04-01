@@ -20,6 +20,7 @@
     background-color: vars.$main-dark-color;
     border-radius: vars.$border-radius-m;
     height: 56px;
+    cursor: pointer;
     transition:
       background-color vars.$transition-duration,
       color vars.$transition-duration;

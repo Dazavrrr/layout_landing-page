@@ -9,6 +9,7 @@
   }
 
   &__product {
+    cursor: pointer;
     grid-column: 1 / -1;
 
     @include mix.on-tablet {
